@@ -1,0 +1,17 @@
+<div class="alert alert-dismissible alert-info mt-5">Eternal server error - refreshing the page will make the error disappear!</div>
+<div class="alert alert-dismissible alert-danger mt-5" *ngIf="error">
+    <h5 class="text-danger">Error{{error.message}}</h5>
+    <p class="font-weight-bold">Note: if you are seeing this then Angular is propably not to blame</p>
+    <p>What to do next?</p>
+    <ol>
+        <li>Open the browser dev tools</li>
+        <li>Inspect the network tab</li>
+        <li>Check the failing request</li>
+        <li>Examine the request URL - make sure it is correct</li>
+        <li>Reproduse the error in Postman - if we see the same responce, then the issue is not in with Angular</li>
+    </ol>
+</div>
+<div class="alert alert-dismissible alert-primary mt-5">
+    <h4>Following is the stack trace - this is where your investigation should start!</h4>
+    <code class="mt-5" style="color: white;">{{error.details}}</code>
+</div>
